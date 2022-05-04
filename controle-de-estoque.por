@@ -83,9 +83,15 @@ programa
 //-------------------------------------------------------------------------------------------
 	}
 	funcao listar(inteiro contVei, cadeia veiculo[], inteiro estoque[]){
+
+				se(veiculo[0]==""){
+					escreva("Nenhum veículo cadastrado!")
+				}
+				senao{
 				escreva("Código   ||   Veículo	||   Estoque	||")
 				para(inteiro i=0; i < contVei; i++){
 					escreva("\n", i, "        ||   ", veiculo[i], "	||  ", estoque[i])
+				}
 				}
 	}
 }
@@ -94,7 +100,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2428; 
+ * @POSICAO-CURSOR = 2788; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {soma, 7, 45, 4};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

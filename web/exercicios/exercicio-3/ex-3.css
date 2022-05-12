@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+:root {
+  font-size: 62, 5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: block;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.6rem;
+}

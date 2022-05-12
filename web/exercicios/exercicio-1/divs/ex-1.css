@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.box-1 {
+  width: 59rem;
+  height: 55.8rem;
+
+  background: #ffa5a5;
+}
+.box-2 {
+  width: 44.3rem;
+  height: 42.8rem;
+
+  background: #bdbbbb;
+}
+.box-3 {
+  width: 33.1rem;
+  height: 32.1rem;
+
+  background: #128d0f;
+}
+.box-4 {
+  width: 19rem;
+  height: 19rem;
+
+  background: #043c2e;
+}
+.box-5 {
+  width: 8rem;
+  height: 8rem;
+
+  background: #ff0000;
+  border-radius: 5rem;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

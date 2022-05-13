@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #dafdba;
+}
+
+html,
+body {
+  height: 100%;
+}
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #012030;
+}
+.fundo {
+  width: 60rem;
+  height: 62.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 1.7rem;
+
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+
+  text-transform: uppercase;
+}
+
+img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+  width: 50rem;
+  height: 28.1rem;
+  border-radius: 8rem;
+
+  border: 2rem outset #13678a;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 3.4rem 1.6rem 3.2rem;
+  gap: 1.6rem;
+
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #13678a;
+  border-color: #13678a;
+  border-radius: 8rem;
+}
+
+button:hover {
+  color: white;
+  background-color: #13678a;
+}
+
+.vid {
+  width: 60rem;
+  height: 62.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

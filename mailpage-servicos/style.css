@@ -10,7 +10,7 @@
 }
 
 html, body{
-    height: 76.8rem;
+    height: calc(100% + 13.4rem);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,11 +19,12 @@ html, body{
 
 body{
     font-size: 1.6rem;
+    background-image: linear-gradient(var(--primary-color),var(--secondary-color));
 }
 
 .pintor{
     position: absolute;
-    left: 73.5rem;
+    left: 72.5rem;
     top: 3.2rem;
     width: 40.6rem;
     height: 49.9rem;
@@ -50,8 +51,8 @@ main{
     align-items: left;
     flex-direction: column;
     
-
-    margin-left: 8rem;
+    padding: 5rem;
+    padding-top: 10rem;
     
 }
 footer{
@@ -63,10 +64,10 @@ footer{
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 2rem;
-     display: flex;
+    display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 5rem;
+    padding: 5rem;
 }
 
 
@@ -89,17 +90,23 @@ footer{
     text-decoration-line: underline;
 
     color: #74B105;
+    cursor: pointer;
 }
-
+a{
+    color: #74B105;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .merece{
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    height: 180px;
-    width: 433px;
-    left: 73.5rem;
+    height: 18rem;
+    width: 43.3rem;
+    left: 72.5rem;
     top: 37.2rem;
     border-radius: 106px;
     border: none;

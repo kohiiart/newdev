@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  :root {
+    font-size: 62.5%;
+  }
+  
+  body {
+    justify-content: center;
+    font-size: 1.6rem;
+    font-family: 'Bebas Neue', cursive;
+  }
+  header, main, footer{
+      margin:0 auto;
+      width: 80%;
+      border: 1px solid blue;
+
+  }
+
+  header{
+      display: flex;
+      justify-content: space-between;
+      padding-inline:5rem;
+      padding-top:2rem;
+      padding-bottom:2rem;
+  }
+  ul{
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+  }
+  li{
+      margin-right: 2rem;
+  }
+  a{
+    text-decoration: none;
+  }
+  header h3{
+    color: darkblue;
+  }
+  header h3:hover{
+    color: darkcyan;
+    font-size: 2rem;
+  }

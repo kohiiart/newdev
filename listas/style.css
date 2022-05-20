@@ -55,15 +55,12 @@
 
   main{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 3rem;
   }
 
   main section:first-child{
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-direction: column;
     padding-inline: 2rem;
 
@@ -113,6 +110,10 @@
     padding: 4rem;
   }
 
+  .social .fa-instagram, .fa-facebook, .fa-whatsapp{
+    margin-right: 2rem;
+  }
+  
   .social .fa-instagram:hover{
     color: #F3186C;
     cursor: pointer;
@@ -132,4 +133,61 @@
 
   footer p{
     margin: 1rem;
+  }
+
+  /*  SOBRE NÓS */
+
+  .main-about{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .main-about p{
+    line-height: 2.5rem;
+    text-align: justify;
+    margin-top: 1.5rem;
+  }
+
+  .main-about h2{
+    margin-top: 1.5rem;
+  }
+
+  table{
+    margin-top: 5rem;
+  }
+
+  table thead{
+    text-align: left;
+  }
+  table tbody tr{
+    margin-top: 1.5rem;
+  }
+
+  td, th{
+    border: 1px solid black;
+    padding: 1px;
+  }
+
+   /*  CONTATO */
+
+  .main-contact{
+    display: flex;
+  }
+
+  .main-contact section:first-child{
+    width: 40%; 
+    border: 1px solid #F3186C;
+    background-image: url("assets/bg-agua-2.jpg");
+
+    color: white;
+    padding: 3rem;
+  }
+
+  .main-contact h2{
+   color: var(--secondary-color);
+  }
+
+  .main-contact section:last-child{
+    width: 40%;
   }

@@ -66,10 +66,6 @@
     color: var(--primary-color);
   }
 
-  main section:last-child{
-    border-radius: 8rem;
-  }
-
   main section h1{
     font-size: 5rem;
     color: var(--secondary-color);

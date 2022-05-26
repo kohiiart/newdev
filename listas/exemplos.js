@@ -1,7 +1,7 @@
 // Java Script: Linguagem de programação;
 // POO programação orientada a objetos;
 // Atributos e métodos(funções);
-
+//OBJETOS = instância de alguma coisa;
 
 //Ex de Atributos: Cor, altura, largura, altura, etc.
 //Ex de Métodos(funções): Acelerar, freiar, Pular, andar, etc.
@@ -104,3 +104,23 @@ p.innerHTML = 'teste JS';
 console.log (p);
 
 document.getElementById('endereco').appendChild(p);
+
+//Classe Carro
+function Carro (cor, marca, modelo, ano) {              //Classe identifica com letra maiúscula no início
+    return{
+        cor,
+        marca,
+        modelo,
+        ano
+    }
+}
+
+//Objeto é uma instãncia de uma classe (conjunto de métodos e atributos)
+//Instâncias(objetos) carro1, carro2, etc.
+const carro1 = ('vermelho', 'volks', 'gol', 2010)
+const carro2 = ('preto', 'volks', 'fusca', 2002)
+const carro3 = ('rosa', 'volks', 'bola', 2011)
+const carro4 = ('roxo', 'volks', 'quadrado', 2014)
+
+console.log('carro', carro1, carro2, carro3, carro4)
+

@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62,5%;
+    --primary-color: rgb(95, 8, 146);
+    --secondary-color: rgb(170, 51, 238);
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(var(--secondary-color),var(--primary-color));
+    background-size: cover;
+}
+
+.container h1{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+#form-message{
+    display: grid;
+    width: 50%;
+    margin: 0 auto;
+    padding: 3rem;
+
+    border-radius: 5rem;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+input{
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#message{
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+label{
+    margin-bottom: 0,5rem;
+}
+
+#add-button{
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color:  var(--primary-color);
+    
+    padding: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: white;
+}
+
+#add-button:hover{
+    border: none;
+    background-image: linear-gradient(var(--secondary-color),var(--primary-color));
+    color: #fff;
+}
+
+#section-messages h2{
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+li{
+    text-align: center;
+    color: #fff;
+    margin-top: 0.9rem;
+}

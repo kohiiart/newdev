@@ -19,6 +19,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-image: linear-gradient(var(--secondary-color),var(--primary-color));
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .container h1{
@@ -45,6 +46,7 @@ input{
     border: 1px solid var(--primary-color);
     border-radius: 1rem;
     margin-bottom: 1rem;
+    outline: none;
 }
 
 #message{
@@ -52,6 +54,7 @@ input{
     border: 1px solid var(--primary-color);
     border-radius: 1rem;
     margin-bottom: 1rem;
+    outline: none;
 }
 
 label{
@@ -59,7 +62,7 @@ label{
 }
 
 #add-button{
-    border: 1px solid var(--primary-color);
+   border: 1px solid var(--primary-color);
     border-radius: 1rem;
     text-transform: uppercase;
     font-weight: 700;

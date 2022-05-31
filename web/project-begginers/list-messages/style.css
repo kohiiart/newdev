@@ -92,3 +92,29 @@ li{
     color: #fff;
     margin-top: 0.9rem;
 }
+
+#table-messages h2{
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+#table-messages table
+{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#table-messages th
+{
+    border: 1px solid #fff;
+    padding: 1rem;
+}
+
+#table-messages td
+{
+    padding: 1rem;
+}

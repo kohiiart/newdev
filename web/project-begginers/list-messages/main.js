@@ -94,13 +94,27 @@ if (!textArea.value.length){
     const iconEdit = document.createElement('i');
     iconEdit.setAttribute('class','fas fa-edit');
     tdButtons.appendChild(iconEdit);
-    iconEdit.setAttribute('style', 'cursor:pointer');
+    iconEdit.setAttribute('title', 'Editar');
+    iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem');
     
     const iconRemove = document.createElement('i');
     iconRemove.setAttribute('class','fas fa-trash');
     tdButtons.appendChild(iconRemove);
-    iconRemove.setAttribute('style', 'cursor:pointer');
-    
+    iconRemove.setAttribute('title', 'Remover');
+    iconRemove.setAttribute('style', 'cursor:pointer; margin-inline: 1rem');
+
+    const iconUp = document.createElement('i')
+    iconUp.setAttribute('class', 'fas fa-circle-arrow-up')
+    tdButtons.appendChild(iconUp);
+    iconUp.setAttribute('title', 'Mover Acima');
+    iconUp.setAttribute('style', 'cursor:pointer; margin-inline: 1rem');
+
+    const iconDown = document.createElement('i')
+    iconDown.setAttribute('class', 'fas fa-circle-arrow-down')
+    tdButtons.appendChild(iconDown)
+    iconDown.setAttribute('title', 'Mover Abaixo');
+    iconDown.setAttribute('style', 'cursor:pointer; margin-inline: 1rem');
+
     tr.appendChild(tdButtons);
     
     tr.setAttribute('id', `line${countRow}`);

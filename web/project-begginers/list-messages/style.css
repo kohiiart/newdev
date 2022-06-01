@@ -100,21 +100,11 @@ li{
 }
 
 
-#table-messages table
+#table-messages table, th, td
 {
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#table-messages th
-{
+    margin: 0 auto;
     border: 1px solid #fff;
     padding: 1rem;
 }
 
-#table-messages td
-{
-    padding: 1rem;
-}

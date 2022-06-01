@@ -1,12 +1,33 @@
 const buttonAddMessage = document.getElementById('add-button');
 
 let countRow = 0;
+let lineEditInMoment = null;
 
-const onClickEdit = (idRecord) => {
-    console.log('pei pei', idRecord);
+const onClickEdit = (lineEdit) => {
+    lineEditInMoment = lineEdit;
+   /* lineEdit.childNodes.forEach((valor, index) => {
+        console.log('valor: ', valor);
+        console.log('index: ', index);
+    });
+  //  const tbody = document.getElementById('tbody');*/
+   // const fromValue = lineEdit.childNodes[0].innerHTML;
+   // const toValue = lineEdit.childNodes[1].innerHTML;
+    //const messageValue = lineEdit.childNodes[2].innerHTML;
+
+        //DESESTRUTURAÇÃO DE ARRAYS
+    const [from, to, message] = lineEdit.childNodes;
+
+    document.getElementById('from').value = from.innerHTML;
+    document.getElementById('to').value = to.innerHTML;
+    document.getElementById('message').value = message.innerHTML;
+
 }
 
-function addMessage (event){
+const onClickRemove = (lineRemove) => {
+   lineRemove.remove()
+}
+
+function addMessage (event){ 
     event.preventDefault();
 
     const inputFrom = document.getElementById('from');
@@ -35,7 +56,6 @@ if (!textArea.value.length){
         message: textArea.value
     };
 
-    console.log('-------oooo', message);
 
     /*const sessionMessages = document.getElementById('section-messages');
 
@@ -71,8 +91,6 @@ if (!textArea.value.length){
     
     const tdButtons = document.createElement('td');
 
-    
-
     const iconEdit = document.createElement('i');
     iconEdit.setAttribute('class','fas fa-edit');
     tdButtons.appendChild(iconEdit);
@@ -85,12 +103,22 @@ if (!textArea.value.length){
     
     tr.appendChild(tdButtons);
     
-    tr.setAttribute('id', countRow);
+    tr.setAttribute('id', `line${countRow}`);
     countRow += 1;
     iconEdit.setAttribute('onclick', `onClickEdit(${tdButtons.parentElement.id});`)
-    console.log('pegar elemento pai', tdButtons.parentElement.id);
-
+    iconRemove.setAttribute('onclick',`onClickRemove(${tdButtons.parentElement.id})`)
+    
+    if(lineEditInMoment){
+        console.log('essa linha ja existe')
+        const [fromToUpdate, toToUpdate, messageToUpdate] = lineEditInMoment.childNodes;
+        fromToUpdate.innerHTML = message.from; 
+        toToUpdate.innerHTML = message.to; 
+        messageToUpdate.innerHTML = message.message; 
+        lineEditInMoment = null;
+        
+    }else{
     tbody.appendChild(tr);
+    }
 };
 
 buttonAddMessage.addEventListener('click', addMessage);

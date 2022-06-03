@@ -136,3 +136,7 @@ if (!textArea.value.length){
 };
 
 buttonAddMessage.addEventListener('click', addMessage);
+
+//manifesto: 
+//service worker
+//armazenamento:

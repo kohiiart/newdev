@@ -1,0 +1,36 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    font-size: 62.5%;
+}
+
+html, body
+{
+    height: 100%;
+}
+body
+{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#formInputs
+{
+    border-radius: 4rem;
+    padding: 3rem;
+    text-align: center;
+}
+.input
+{
+    margin-bottom: 2rem;
+    width: 100%;
+}

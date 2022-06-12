@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --bg-color: #F2F2F2;
+    --txt-color: #262624;
+    --primary-color: #4E3E59;
+    --secondary-color: #7E698C;
+    --tertiary-color: #B08EBF;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+
+    display: flex;
+}
+
+.colorCar{
+    background-color: var(--primary-color);
+}
+.car
+{
+    transform: scale(0.2);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}

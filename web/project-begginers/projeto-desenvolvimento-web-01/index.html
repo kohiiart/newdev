@@ -13,49 +13,68 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <header>
-        <h1>Cadastro</h1>
-    </header>
-    <main>
-        <section class="cadastro">
-            <form>
-                <fieldset id="formInputs">
-                    <legend><h1>Cadastre-se agora!</h1></legend>
-                    <br>
-                    <div class="name">
-                        <label for="name">Nome</label><br>
-                        <input type="text" id="name" class="input" autocomplete="off">
-                     </div>
-                      <div class="lastName">
-                        <label for="lastName">Sobrenome</label><br>
-                        <input type="text" id="lastName" class="input" autocomplete="off">
-                    </div>
-                    <div class="local">
-                        <label for="local">Endereço</label><br>
-                        <input type="text" id="local" class="input" autocomplete="off">
-                    </div>
-                    <div class="complement">
-                        <label for="complement">Complemento</label><br>
-                        <input type="text" id="complement" class="input" autocomplete="off">
-                    </div>
-                    <div class="tel">
-                        <label for="tel">Telefone</label><br>
-                        <input type="text" id="tel" class="input" autocomplete="off">
-                    </div>
-                    <div class="email">
-                        <label for="email">e-mail</label><br>
-                        <input type="email" id="email" class="input" autocomplete="off">
-                    </div>
-                    <div class="submit">
-                        <button type="submit">Enviar</button> 
-                    </div>
-                </fieldset>
-            </form>
+    <div class="back">
+        <section>
+            <div class="container">
+                <div class="info">
+                    <h1>Fale conosco!</h1>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="formulario">
+                    <form id="formRegister">
+                        <fieldset id="formInputs">
+                            <legend><h1>Cadastre-se agora!</h1></legend>
+                            
+                            <div class="name">
+                                <label for="name">Nome</label><br>
+                                <input type="text" id="name" class="input" autocomplete="off">
+                            </div>
+                            <div class="lastName">
+                                <label for="lastName">Sobrenome</label><br>
+                                <input type="text" id="lastName" class="input" autocomplete="off">
+                            </div>
+                            <div class="local">
+                                <label for="local">Endereço</label><br>
+                                <input type="text" id="location" class="input" autocomplete="off">
+                            </div>
+                            <div class="complement">
+                                <label for="complement">Complemento</label><br>
+                                <input type="text" id="complement" class="input" autocomplete="off">
+                            </div>
+                            <div class="tel">
+                                <label for="tel">Telefone</label><br>
+                                <input type="text" id="tel" class="input" autocomplete="off">
+                            </div>
+                            <div class="email">
+                                <label for="email">e-mail</label><br>
+                                <input type="email" id="email" class="input" autocomplete="off">
+                            </div>
+                            <div class="submit">
+                                <button type="submit" id="submitButton">Enviar</button> 
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section> 
+        <section class="register">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Endereço</th>
+                        <th>Complemento</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
         </section>
-        <section class="design"></section>
-    </main>
-    <footer>
-        
-    </footer>
+    </div>
+    <script src="main.js"></script>  
 </body>
 </html>

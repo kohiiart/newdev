@@ -17,20 +17,70 @@ body
 {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
-    margin: 0 auto;
+}
+body::before
+{
+    content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: url(assets/bg-cocoa.jpg) 0 0 no-repeat;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+  background-attachment: fixed;
+}
+.back
+{
+}
+section:first-child{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    min-height: 63.5rem;
 }
-#formInputs
+.container
 {
+    background-color: #fff;
+    display: flex;
+    margin: 0 auto;
+    height: 50rem;
+    border-radius: 6rem;
+}
+.info
+{
+    width: 40%;
+    background-image: url(assets/bg-chocolate.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    padding-right: 20rem;
+}
+.info h1
+{
+    color: #fff;
+    font-size: 6rem;
+    line-height: 6.5rem;
+    text-transform: uppercase;
+}
+.formulario
+{
+    width: 50%;
+    justify-content: right;
+    padding: 2rem;
+}
+.formulario fieldset
+{
+    border: 1px solid #261514;
     border-radius: 4rem;
     padding: 3rem;
-    text-align: center;
+    height: 40rem;
 }
-.input
+form
 {
-    margin-bottom: 2rem;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }

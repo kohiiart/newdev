@@ -7,8 +7,8 @@
     font-size: 62.5%;
     --bg-color: #F2F2F2;
     --txt-color: #262624;
-    --primary-color: #4E3E59;
-    --secondary-color: #7E698C;
+    --primary-color: #391a4e;
+    --secondary-color: #6d418a;
     --tertiary-color: #B08EBF;
 }
 
@@ -23,15 +23,134 @@ body{
     color: var(--txt-color);
 
     display: flex;
+    flex-direction: column;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header #logo{
+    position: relative;
+    max-width: 25rem;
+    color: var(--primary-color);
 }
 
-.colorCar{
-    background-color: var(--primary-color);
+header ul{
+    position: relative;
+    display: flex;
 }
-.car
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 4rem;
+    text-decoration: none;
+    color: var(--txt-color);
+
+}
+
+header ul li a:hover{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 900;
+}
+main
 {
-    transform: scale(0.2);
+    margin-top: 14rem;
+    display: flex;
+}
+.container
+{   
+    position: relative;
+    max-width: 60rem;
+    margin-left: 10rem;
+}
+.container h1
+{
+    line-height: 7.4rem;
+    font-size: 5rem;
+}
+#title-index
+{
+    text-transform: uppercase;
+    font-size: 8rem;
+    color: var(--secondary-color);
+}
+.container p
+{
+    margin-top: 1rem;
+    width: 53rem;
+}
+.container button
+{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+    background-color: inherit;
+    border-radius: 3rem;
+    margin-left: 7rem;
+}
+
+.container button
+{
+   color: var(--primary-color); 
+   border: 1px solid var(--primary-color);
+}
+#like
+{
+    margin-left: 1rem;
+}
+#follow:hover
+{
+    color: #fff;
+    background-color: rgb(218, 32, 63);
+    cursor: pointer;
+    border: none;
+}
+#like:hover
+{
+    color: #fff;
+    background-color: rgb(18, 108, 199);
+    border: none;
+    cursor: pointer;
+}
+.container i
+{
+    margin-right: 0.6rem;
+}
+.container a
+{
+    text-decoration: none;
+    color: inherit;
+}
+.colorCar
+{
+    background-image: linear-gradient(var(--secondary-color), var(--primary-color));
+    position: relative;
+    width: 40rem;
+    height: 46rem;
+    margin-left: 7rem;
+    border-radius: 5rem;
+}
+#mercedes
+{
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 26rem;
+    left: 60rem;
+    max-height: 30rem;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }

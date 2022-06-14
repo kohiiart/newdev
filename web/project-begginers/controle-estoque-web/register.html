@@ -16,14 +16,53 @@
     <header>
         <i class="fa-solid fa-car fa-3x" id="logo"></i>
         <ul>
-            <a href="index.html"><li>Home</li></a>
-            <a href="#"><li>Cadastrar</li></a>
-            <a href="list-cars.html"><li>Nossos Veículos</li></a>
-            <a href="moviment.html"><li>Movimentação</li></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cadastrar</a></li>
+            <li><a href="list-cars.html">Nossos Veículos</a></li>
+            <li><a href="moviment.html">Movimentação</a></li>
         </ul>
     </header>
     <main class="main-register">
-        <div class="register-area"></div>
+        <div class="register-area">
+            <section class="register-car">
+                <form action="" id="register-form">
+                    <fieldset id="register-field">
+                        <legend><h1>Cadastrar Veículo</h1></legend>
+                        <br>
+                        <div class="inputBox">
+                            <label for="car-model">Modelo</label>
+                            <input type="text" id="car-model" autocomplete="off">
+                        </div>
+                        <div class="inputBox">
+                            <label for="car-brand">Marca</label>
+                            <input type="text" id="car-brand" autocomplete="off">
+                        </div>
+                        <div class="inputBox">
+                            <label for="car-number">Quantidade</label>
+                            <input type="number" id="car-number" autocomplete="off">
+                        </div>
+                        <br>
+                        <button type="submit" id="submit-register"><h2>Cadastrar</h2></button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="in-out-cars">
+                <form action="" id="in-out-form">
+                    <fieldset class="in-out-field">
+                        <legend><h1>Entrada/Saída</h1></legend>
+                        <div class="inputBox">
+                            <label for="in-cars">Entrada</label>
+                            <input type="number" id="in-cars">
+                        </div>
+                        <div class="inputBox">
+                            <label for="out-cars">Saída</label>
+                            <input type="number" id="out-cars">
+                        </div>
+                        <button type="submit" id="submit-in-ou"><h2>Enviar</h2></button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
         <div class="counter"></div>
     </main>
     <footer></footer>

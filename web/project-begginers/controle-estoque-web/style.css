@@ -128,6 +128,17 @@ main
     border: none;
     cursor: pointer;
 }
+#register-button
+{
+    width: 33.4rem;
+}
+#register-button:hover
+{
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
 .container i
 {
     margin-right: 0.6rem;
@@ -153,4 +164,31 @@ main
     left: 60rem;
     max-height: 30rem;
     transform: matrix(-1, 0, 0, 1, 0, 0);
+    
+}
+
+/*------------------------------------------------REGISTER HTML--------------------------------------------*/
+
+.main-register
+{
+    display: flex;
+    margin-inline: 10rem;
+    padding: 5rem;
+    width: 85%;
+}
+.inputBox
+{
+    display: grid;
+}
+/*------------------------------------------------LIST-CARS HTML--------------------------------------------*/
+
+.main-list-cars
+{
+    justify-content: center;
+    align-items: center;
+}
+.main-list-cars h1
+{
+    margin-inline: 10rem;
+    color: var(--primary-color);
 }

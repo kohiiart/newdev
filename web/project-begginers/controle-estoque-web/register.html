@@ -31,18 +31,18 @@
                         <br>
                         <div class="inputBox">
                             <label for="car-model">Modelo</label>
-                            <input type="text" id="car-model" autocomplete="off">
+                            <input type="text" id="car-model" autocomplete="off" required>
                         </div>
                         <div class="inputBox">
                             <label for="car-brand">Marca</label>
-                            <input type="text" id="car-brand" autocomplete="off">
+                            <input type="text" id="car-brand" autocomplete="off" required>
                         </div>
                         <div class="inputBox">
                             <label for="car-number">Quantidade</label>
-                            <input type="number" id="car-number" autocomplete="off">
+                            <input type="number" id="car-number" autocomplete="off" required>
                         </div>
                         <br>
-                        <button type="submit" id="submit-register"><h2>Cadastrar</h2></button>
+                        <button onclick="pageList()" type="submit" id="submit-register"><h2>Cadastrar</h2></button>
                     </fieldset>
                 </form>
             </section>
@@ -58,7 +58,7 @@
                             <label for="out-cars">Saída</label>
                             <input type="number" id="out-cars">
                         </div>
-                        <button type="submit" id="submit-in-ou"><h2>Enviar</h2></button>
+                        <button onclick="pageInOut()" type="submit" id="submit-in-ou"><h2>Enviar</h2></button>
                     </fieldset>
                 </form>
             </section>

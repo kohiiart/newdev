@@ -10,13 +10,12 @@ const onClickRemove = (element) => {
     
     const identificadorASerEncontrado = 
       +element.getAttribute('identificador');
-  console.log ('uepaaaaa ', identificadorASerEncontrado);
+    
     const carsDelete = loadCars();
-     carsDelete.splice(identificadorASerEncontrado,1)
+    carsDelete.splice(identificadorASerEncontrado,1)
   
-     localStorage.setItem('carRegistration', JSON.stringify(carsDelete));
-      
-
+    localStorage.setItem('carRegistration', JSON.stringify(carsDelete)); 
+ 
     listCars();
   }
 
@@ -49,19 +48,18 @@ const listCars = () => {
     const cars = loadCars();
     
     
-    function createUl (){
+    
        let ul = document.getElementById('list-cars-ul');
        if (ul) {
-         document.getElementById('list-cars-section').appendChild(ul)
-        }   
-        ul = document.createElement('ul')
-        ul.setAttribute('id', `list-cars-ul`);
-   }
-       const ul = document.getElementById('list-cars-ul');
-   
-   cars.forEach((item, identificador) => {
+        ul.remove()
+    }   
+    ul = document.createElement('ul')
+    ul.setAttribute('id', `list-cars-ul`);
+    
+    
+    cars.forEach((item, identificador) => {
         const li = document.createElement('li');
-        li.innerHTML = `${item.model} ${item.brand} ${item.quantity}`;
+        li.innerHTML = `Código: ${identificador} || ${item.model} ${item.brand} ${item.quantity} ` ;
         
         li.appendChild(span(identificador))
         li.setAttribute('id', `${identificador}`)
@@ -71,14 +69,18 @@ const listCars = () => {
             ul.appendChild(li)
         }
     }); 
-    createUl()
+    
+    const listCarSection = document.getElementById('list-cars-section');
+    if (listCarSection) {
+        document.getElementById('list-cars-section').appendChild(ul)
+    }
 }
 
 
 listCars();
 // Cadastro
 
-function registryCar(event) {
+function registryCar(event, identificador) {
     event.preventDefault();
     console.log('registrando um veiculo')
 
@@ -87,9 +89,8 @@ function registryCar(event) {
     const car = {
         model: model.value,
         brand: brand.value,
-        quantity: +quantity.value
+        quantity: +quantity.value,
     }
-    
 
     cars = loadCars();
 
@@ -110,20 +111,19 @@ const listMoviment = () => {
     const moviments = loadMoviment();
     
     
-    function createUlMoviment (){
+    
        let ul = document.getElementById('in-out-ul');
        if (ul) {
-         document.getElementById('in-out-section').appendChild(ul)
-        }   
-        ul = document.createElement('ul')
-        ul.setAttribute('id', `in-out-ul`);
-   }
-       const ul = document.getElementById('in-out-ul');
-   
-   moviments.forEach((item, identificador) => {
+        ul.remove()
+    }   
+    ul = document.createElement('ul')
+    ul.setAttribute('id', `in-out-ul`);
+    
+    
+    moviments.forEach((item, identificador) => {
         const li = document.createElement('li');
-        li.innerHTML = `${item.enter} ${item.out}`;
-        console.log(item)
+        li.innerHTML = `Código: ${identificador} || ${item.model} ${item.brand} ${item.quantity} ` ;
+        
         li.setAttribute('id', `${identificador}`)
         console.log('testndo-----', li.id)
         
@@ -131,7 +131,11 @@ const listMoviment = () => {
             ul.appendChild(li)
         }
     }); 
-    createUlMoviment()
+    
+    const movimentSection = document.getElementById('list-cars-section');
+    if (listCarSection) {
+        document.getElementById('list-cars-section').appendChild(ul)
+    }
 }
 
 
@@ -141,19 +145,19 @@ function movimentRegistry(event) {
     event.preventDefault();
     console.log('movimentando')
 
-    const [enter, out] = document.getElementById('in-out-field').querySelectorAll('input');
+    const [enter, out] = document.getElementById('moviment-field').querySelectorAll('input');
 
     const moviment = {
-        in: +enter.value,
+        enter: +enter.value,
         out: +out.value        
     }
     
 
-    moviments = loadMoviments();
+    moviments = loadMoviment();
 
     moviments.push(moviment)
 
-    storage.setItem('MovimentRegistration', JSON.stringify(moviment))
+    storage.setItem('movimentRegistration', JSON.stringify(moviments))
 
 
     console.log('----- ', moviment)

@@ -107,7 +107,7 @@ function registryCar(event, identificador) {
 
 //-------------MOVIMENTO--------------------------------------------------------------------------------
 
-const listMoviment = () => {
+/*const listMoviment = () => {
     const moviments = loadMoviment();
     
     
@@ -136,10 +136,10 @@ const listMoviment = () => {
     if (listCarSection) {
         document.getElementById('list-cars-section').appendChild(ul)
     }
-}
+}*/
 
 
-listMoviment();
+/*listMoviment();
 
 function movimentRegistry(event) {
     event.preventDefault();
@@ -163,7 +163,7 @@ function movimentRegistry(event) {
     console.log('----- ', moviment)
     listMoviment();
     document.getElementById('in-out-form').querySelector('form').reset()
-}
+}*/
 
 function pageList(){
     window.location = 'list-cars.html'
@@ -180,8 +180,3 @@ if (btnRegistry) {
     btnRegistry.addEventListener('click', registryCar);
 }
 
-const btnMoviment = document.getElementById('submit-in-out');
-
-if (btnMoviment) {
-    btnMoviment.addEventListener('click', movimentRegistry)
-}

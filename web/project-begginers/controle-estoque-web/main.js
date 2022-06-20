@@ -4,6 +4,22 @@ let cars = [];
 
 let moviments = [];
 
+let total = 0;
+
+let findTotal = null;
+
+const carQuantity = (element, index) => {
+    const code = +element.getAttribute('car-code');
+
+    findTotal += code    
+    const addCar = +document.getElementById('in-cars').value;
+    const removeCar = +document.getElementById('out-cars').value;
+
+    const total = 0;
+    total += addCar - removeCar;
+    
+    return total
+}
 
 const onClickRemove = (element) => {
    
@@ -59,10 +75,10 @@ const listCars = () => {
     
     cars.forEach((item, identificador) => {
         const li = document.createElement('li');
-        li.innerHTML = `Código: ${identificador} || ${item.model} ${item.brand} ${item.quantity} ` ;
+        li.innerHTML = `Código: ${identificador} || ${item.model} ${item.brand} ` ;
         
         li.appendChild(span(identificador))
-        li.setAttribute('id', `${identificador}`)
+        li.setAttribute('car-code', `${identificador}`)
         console.log('testndo-----', li.id)
         
         if(ul){
@@ -84,12 +100,11 @@ function registryCar(event, identificador) {
     event.preventDefault();
     console.log('registrando um veiculo')
 
-    const [model, brand, quantity] = document.getElementById('register-field').querySelectorAll('input');
+    const [model, brand] = document.getElementById('register-field').querySelectorAll('input');
 
     const car = {
         model: model.value,
-        brand: brand.value,
-        quantity: +quantity.value,
+        brand: brand.value
     }
 
     cars = loadCars();
@@ -107,24 +122,26 @@ function registryCar(event, identificador) {
 
 //-------------MOVIMENTO--------------------------------------------------------------------------------
 
-/*const listMoviment = () => {
+const listMoviment = () => {
     const moviments = loadMoviment();
     
+    carQuantity();
     
-    
-       let ul = document.getElementById('in-out-ul');
+       let ul = document.getElementById('moviment-ul');
        if (ul) {
         ul.remove()
     }   
     ul = document.createElement('ul')
-    ul.setAttribute('id', `in-out-ul`);
+    ul.setAttribute('id', `moviment-ul`);
     
     
     moviments.forEach((item, identificador) => {
         const li = document.createElement('li');
-        li.innerHTML = `Código: ${identificador} || ${item.model} ${item.brand} ${item.quantity} ` ;
+
+        const total = carQuantity();    
+        li.innerHTML = `Código: ${item.code} || ${item.enter} ${item.out} ${item.total}` ;
         
-        li.setAttribute('id', `${identificador}`)
+        li.setAttribute('car-code', `${identificador}`)
         console.log('testndo-----', li.id)
         
         if(ul){
@@ -132,27 +149,30 @@ function registryCar(event, identificador) {
         }
     }); 
     
-    const movimentSection = document.getElementById('list-cars-section');
-    if (listCarSection) {
-        document.getElementById('list-cars-section').appendChild(ul)
+    const movimentSection = document.getElementById('moviment-section');
+    if (movimentSection) {
+        document.getElementById('moviment-section').appendChild(ul)
     }
-}*/
+}
 
 
-/*listMoviment();
+listMoviment();
 
 function movimentRegistry(event) {
     event.preventDefault();
-    console.log('movimentando')
+    carQuantity();
 
-    const [enter, out] = document.getElementById('moviment-field').querySelectorAll('input');
+    const total = carQuantity();
+    const [code, enter, out] = document.getElementById('moviment-field').querySelectorAll('input');
 
     const moviment = {
+        code: +code.value,
         enter: +enter.value,
-        out: +out.value        
+        out: +out.value,
+        total: total        
     }
     
-
+    
     moviments = loadMoviment();
 
     moviments.push(moviment)
@@ -163,7 +183,7 @@ function movimentRegistry(event) {
     console.log('----- ', moviment)
     listMoviment();
     document.getElementById('in-out-form').querySelector('form').reset()
-}*/
+}
 
 function pageList(){
     window.location = 'list-cars.html'
@@ -178,5 +198,11 @@ const btnRegistry = document.getElementById('submit-register');
 
 if (btnRegistry) {
     btnRegistry.addEventListener('click', registryCar);
+}
+
+const btnMoviment = document.getElementById('submit-in-out');
+
+if (btnMoviment) {
+    btnMoviment.addEventListener('click', movimentRegistry);
 }
 

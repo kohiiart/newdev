@@ -4,21 +4,15 @@ let cars = [];
 
 let moviments = [];
 
-let total = 0;
+let findingTotal = null;
 
-let findTotal = null;
+const generateTotal = (element) =>{
+    const findedTotal = element.getAttribute('car-code');
 
-const carQuantity = (element, index) => {
-    const code = +element.getAttribute('car-code');
+    findingTotal += findedTotal;
 
-    findTotal += code    
-    const addCar = +document.getElementById('in-cars').value;
-    const removeCar = +document.getElementById('out-cars').value;
-
-    const total = 0;
-    total += addCar - removeCar;
-    
-    return total
+    const values = loadMoviment();
+    console.log('carregando movimento ', values)
 }
 
 const onClickRemove = (element) => {
@@ -79,7 +73,7 @@ const listCars = () => {
         
         li.appendChild(span(identificador))
         li.setAttribute('car-code', `${identificador}`)
-        console.log('testndo-----', li.id)
+        console.log('testndo-----', li.getAttribute('car-code'))
         
         if(ul){
             ul.appendChild(li)
@@ -125,7 +119,7 @@ function registryCar(event, identificador) {
 const listMoviment = () => {
     const moviments = loadMoviment();
     
-    carQuantity();
+    
     
        let ul = document.getElementById('moviment-ul');
        if (ul) {
@@ -138,10 +132,10 @@ const listMoviment = () => {
     moviments.forEach((item, identificador) => {
         const li = document.createElement('li');
 
-        const total = carQuantity();    
+      
         li.innerHTML = `Código: ${item.code} || ${item.enter} ${item.out} ${item.total}` ;
         
-        li.setAttribute('car-code', `${identificador}`)
+        li.setAttribute('moviment-code', `${identificador}`)
         console.log('testndo-----', li.id)
         
         if(ul){
@@ -160,19 +154,22 @@ listMoviment();
 
 function movimentRegistry(event) {
     event.preventDefault();
-    carQuantity();
-
-    const total = carQuantity();
+    
+    let enterCar = 0;
+    let outCar = 0;
     const [code, enter, out] = document.getElementById('moviment-field').querySelectorAll('input');
 
     const moviment = {
         code: +code.value,
-        enter: +enter.value,
-        out: +out.value,
-        total: total        
+        enter: enterCar+=+enter.value,
+        out: outCar+=+out.value       
     }
     
     
+    const cars = loadCars ()
+
+    
+
     moviments = loadMoviment();
 
     moviments.push(moviment)

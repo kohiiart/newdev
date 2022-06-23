@@ -32,7 +32,7 @@ const clickToRemoveTask = (element) => {
     
     const tasks = listTasks();
 
-    console.log('mas que buceta-----', tasks)
+    console.log('teste task-----', tasks)
   }
 
 const span = (index) => {
@@ -77,7 +77,7 @@ const listTasks = () => {
 
         const lineBreak = document.createElement('br')
 
-        console.log('caralho----------->', `${index}`);
+        console.log('cindex----------->', `${index}`);
         
         console.log('indice----------->', input.getAttribute('index'));
         

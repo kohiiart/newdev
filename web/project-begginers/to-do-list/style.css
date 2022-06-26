@@ -102,3 +102,9 @@ main form
     text-decoration: line-through solid green 2px;
     color: green;
 }
+#up-btn
+{
+    color: #fff; 
+    margin-top: 5rem; 
+    cursor: pointer;  
+}

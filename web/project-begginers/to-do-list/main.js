@@ -32,7 +32,7 @@ const clickToRemoveTask = (element) => {
     
     const tasks = listTasks();
 
-    console.log('mas que buceta-----', tasks)
+    console.log('listando tarefas-----', tasks)
   }
 
 const span = (index) => {
@@ -77,7 +77,7 @@ const listTasks = () => {
 
         const lineBreak = document.createElement('br')
 
-        console.log('caralho----------->', `${index}`);
+        console.log('mostrando indice----------->', `${index}`);
         
         console.log('indice----------->', input.getAttribute('index'));
         
@@ -106,6 +106,10 @@ const addTask = (event) => {
     document.querySelector('form').reset();
 
     listTasks();
+}
+
+function scrollUp() {
+    window.scrollTo(0,0);
 }
 
 const taskBtn = document.getElementById('submit-task')

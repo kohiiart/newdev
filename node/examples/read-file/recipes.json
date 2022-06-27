@@ -1,0 +1,19 @@
+{
+    "receita" : {
+        "titulo": "pizza",
+        "Ingredientes": [
+            {  "nome": "Farinha", 
+                "quantidade": 1, 
+                "unidade": "xícara"
+            },
+            {  "nome": "Azeite", 
+                "quantidade": 1, 
+                "unidade": "colher de sopa"
+            },
+            {  "nome": "Água", 
+                "quantidade": 1, 
+                "unidade": "xícara"
+            }
+        ]
+    }
+}

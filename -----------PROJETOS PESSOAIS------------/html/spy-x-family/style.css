@@ -68,7 +68,13 @@ header ul li a:hover{
     font-size: 2rem;
     font-weight: 900;
 }
-
+#scroll-btn
+{
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    z-index: 1;
+}
 .content{
     position: relative;
     display: flex;
@@ -169,4 +175,5 @@ header ul li a:hover{
 }
 #social:hover{
     color: var(--secondary-color);
+    cursor: pointer;
 }

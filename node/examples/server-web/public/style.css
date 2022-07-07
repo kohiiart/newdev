@@ -1,0 +1,15 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    font-size: 62.5%;
+}
+body{
+    background-image: url(https://studiosol-a.akamaihd.net/tb/palcomp3-fotos/b/0/b/d/ednaldo-pereira-d89c8590-0027-427a-88dc-7716c055a09b.jpg);
+    background-size: cover;
+
+    color: #fff;
+}

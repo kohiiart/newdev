@@ -3,11 +3,11 @@ const logger = require('../utils/logger');
 
 exports.findAll = async (request, response) => {
   try {
-    const sql = await database.select('*').from('authors');
+    const sql = await database.select('*').from('books');
     
     return response.status(200)
       .send({
-        authors: sql
+        books: sql
       });
   } catch (error) {
     logger(error.message);
@@ -18,7 +18,7 @@ exports.findAll = async (request, response) => {
 
 exports.create = async (request, response) => {
   try {
-    await database('authors').insert(request.body);
+    await database('books').insert(request.body);
 
     return response.status(200).send({
       status: 'success'
@@ -32,19 +32,19 @@ exports.getById = async (request, response) => {
   try {
     const params = request.params;
 
-    const [previousAuthor] = await database
+    const [book] = await database
       .select('*')
-      .from('authors')
+      .from('books')
       .where({ id: params.id })
       .limit(1);
 
-    if (!previousAuthor) {
+    if (!book) {
       return response.status(404) // recurso não encontrado
         .send(`O registro com id: ${params.id} não foi encontrado!`);
     }
     return response
       .status(200)
-      .send({ data: previousAuthor });
+      .send({ data: book });
   } catch (error) {// tratamento de exceção, trata os erros que ocorrem
     return response.status(500).send({ error: error?.message || e });
   }
@@ -54,23 +54,21 @@ exports.deleteById = async (request, response) => {
   try {
     const params = request.params;
 
-    const [previousAuthor] = await database
+    const [book] = await database
       .select('*')
-      .from('authors')
+      .from('books')
       .where({ id: params.id })
       .limit(1);
 
-    if (!previousAuthor) {
+    if (!book) {
       return response.status(404) // recurso não encontrado
         .send(`O registro com id: ${params.id} não foi encontrado!`);
     }
 
-    const nextAuthor = request.body;
-
     await database
-      .delete({ name: nextAuthor.name })
-      .from('authors')
-      .where({ id: previousAuthor.id });
+      .delete()
+      .from('books')
+      .where({ id: book.id });
 
     return response
       .status(200)
@@ -85,25 +83,25 @@ exports.put = async (request, response) => {
     const params = request.params;
 
     // Busco o registro no banco de dados para validar se existe
-    const [previousAuthor] = await database
+    const [previousBook] = await database
       .select('*')
-      .from('authors')
+      .from('books')
       .where({ id: params.id })
       .limit(1);
 
     // se não existir, eu preciso informa o 
     //client que não existe(não encontrado)
-    if (!previousAuthor) {
+    if (!previousBook) {
       return response.status(404) // recurso não encontrado
         .send(`O registro com id: ${params.id} não foi encontrado!`);
     }
 
-    const nextAuthor = request.body;
+    const nextBook = request.body;
 
     await database
-      .update({ name: nextAuthor.name })
+      .update({ name: nextBook.name })
       .from('authors')
-      .where({ id: previousAuthor.id });
+      .where({ id: previousBook.id });
 
     return response
       .status(200)

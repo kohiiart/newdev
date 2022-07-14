@@ -1,30 +1,27 @@
-const express = require('express')
-const routes = express.Router()
-const IndexController = require('./controllers/IndexController');
-const AuthorControllers = require('./controllers/AuthorController')
-const BooksControllers = require('./controllers/BooksController');
+const express = require('express');
+const routes = express.Router();
 
-//Index Routes
+const IndexController = require('./controllers/IndexController');
+const AuthorController = require('./controllers/AuthorController');
+const BookController = require('./controllers/BookController');
+
+// Routes index
 routes.get('/', IndexController.index);
 
-//Authors Routes
-routes.get('/authors', AuthorControllers.findAll);
-routes.post('/authors', AuthorControllers.create);
+// Routes Authors
+routes.get('/authors', AuthorController.findAll);
+routes.post('/authors', AuthorController.create);
 
-//Authors ID Routes
-routes.get('/authors/:id', AuthorControllers.getByID);
-routes.delete('/authors/:id', AuthorControllers.delete);
-routes.put('/authors/:id', AuthorControllers.put);
-routes.patch('/authors/:id', AuthorControllers.patch);
+routes.get('/authors/:id', AuthorController.getById);
+routes.delete('/authors/:id', AuthorController.deleteById);
+routes.put('/authors/:id', AuthorController.put);
 
-//Books Routes
-routes.get('/books', BooksControllers.findBooks);
-routes.post('/books', BooksControllers.createBook);
+// Routes Books
+routes.get('/books', BookController.findAll);
+routes.post('/books', BookController.create);
 
-//Books ID Routes
-routes.get('/books/:id', BooksControllers.getBookID);
-routes.delete('/books/:id', BooksControllers.deleteBook);
-routes.put('/books/:id', BooksControllers.putBook);
-routes.patch('/books/:id', BooksControllers.patchBook);
+routes.get('/books/:id', BookController.getById);
+routes.delete('/books/:id', BookController.deleteById);
+routes.put('/books/:id', BookController.put);
 
-module.exports = routes
+module.exports = routes;

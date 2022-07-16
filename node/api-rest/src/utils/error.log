@@ -1,1 +1,1 @@
-database.select is not a function
+database.select is not a functionselect * from `authors` - SQLITE_ERROR: no such table: authorsselect * from `authors` - SQLITE_ERROR: no such table: authorsselect `books`.`id`, `books`.`title`, `authors`.`name` as `author Name` from `books` inner join `authors` on `authors`.`id` = `books`.`authorId` - SQLITE_ERROR: no such table: books

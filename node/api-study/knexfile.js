@@ -4,15 +4,13 @@ module.exports = {
         connection: {
             filename: 'dev.sqlite3'
         },
-        useNullAsDefault : true,
+         pool: {
+      afterCreate: function(connection, cb) {
+        connection.run('PRAGMA foreign_keys = ON', cb);
+      }
+    },
         migrations : {
             directory: __dirname + '/src/databases/migrations'
         },
-        seeds:{
-            directory: __dirname + '/src/databases/seeds'
-        } 
     },
-    production:{
-
-    }
 }

@@ -1,8 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-
-console.log('Funcionando')
-
 const routes = require('./routes');
 const app = express()
 

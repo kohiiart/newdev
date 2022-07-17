@@ -4,14 +4,13 @@ exports.findAll = async (request, response) => {
     try {
       const sql = await database
         .select(
-          ['course.title']
+          ['courses.title', 'courses.id']
         )
-        .from('course')
+        .from('courses')
         
-      
       return response.status(200)
         .send({
-          course: sql
+          courses: sql
         });
     } catch (error) {
       logger(error.message);

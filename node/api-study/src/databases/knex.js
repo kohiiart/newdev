@@ -3,6 +3,6 @@ const environment =
 
    const config = require('../../knexfile')[environment];
 
-   const knex = require('knex')[config];
+   const knex = require('knex')(config);
 
    module.exports = knex;

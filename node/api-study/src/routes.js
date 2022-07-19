@@ -10,10 +10,13 @@ const InstructorController = require('./controllers/InstructorController');
 routes.get('/', IndexController.index);
 
 //COURSE
-routes.get('/', CourseController.findAll);
-routes.post('/', CourseController.create);
-routes.get('/', CourseController.getById);
-routes.delete('/', CourseController.deleteById);
-routes.put('/', CourseController.put);
+routes.get('/courses', CourseController.findAll);
+routes.post('/courses', CourseController.create);
+/*routes.get('/courses:id', CourseController.getById);
+routes.delete('/courses', CourseController.deleteById);
+routes.put('/courses', CourseController.put);*/
+
+//INSTRUCTORS
+routes.post('/instructor', InstructorController.create);
 
 module.exports = routes

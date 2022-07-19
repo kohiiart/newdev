@@ -24,7 +24,7 @@ exports.create = async (req, res) => {
 exports.findAll = async (req, res) =>{
   try {
     const [allCourses]=  await knex.select('*').from('courses');
-    return res.status(200).send(['Courses:', allCourses])
+    return res.status(200).send({courses: allCourses})
 
   } catch (e) {
       return res.status(500).send({ error: e?.message || e });

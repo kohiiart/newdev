@@ -8,7 +8,19 @@ exports.up = function(knex) {
     table.string('title');
     table.string('description');
     table.string('videoId');
-  });
+    t.integer('instructorId')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('instructors')
+        .onDelete('CASCADE');
+      t.integer('courseId')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('courses')
+        .onDelete('CASCADE');
+    })
 };
 
 /**

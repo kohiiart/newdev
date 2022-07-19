@@ -19,4 +19,7 @@ routes.put('/courses', CourseController.put);*/
 //INSTRUCTORS
 routes.post('/instructor', InstructorController.create);
 
+//CLASS
+routes.post('/class', ClassController.create)
+
 module.exports = routes

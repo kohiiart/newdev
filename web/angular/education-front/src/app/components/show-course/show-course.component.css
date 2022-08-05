@@ -1,0 +1,25 @@
+.course{
+    width: 100%;
+    margin-inline: 10px;
+    border-radius: 10px;
+    max-width: 2rem;
+}
+.course:hover{
+    transform: scale(0.8);
+}
+.course-card{
+    position: relative;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.course-img{
+    border-radius: 6rem;
+}
+.course-title{
+    bottom: 5px;
+    left: 4.6rem;
+    position: absolute;
+    text-align: center;
+}

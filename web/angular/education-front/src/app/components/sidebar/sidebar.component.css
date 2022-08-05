@@ -1,0 +1,7 @@
+aside{
+    width: 348px;
+    border-left: 3px solid var(--secondary-color);
+}
+span{
+    border-bottom: 3px solid var(--secondary-color);
+}

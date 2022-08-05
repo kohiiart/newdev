@@ -1,0 +1,21 @@
+
+.date-format{
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.card-lesson{
+    border: 1px solid var(--tertiary-color);
+    border-radius: 5px;
+}
+
+.span-type{
+    padding-top: 0,125rem;
+    padding-bottom: 0,125rem;
+    color:white;
+    border: 1px solid var(--tertiary-color);
+}
+
+strong{
+    color: var(--light-color);
+}
